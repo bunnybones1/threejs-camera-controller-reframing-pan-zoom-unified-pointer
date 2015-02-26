@@ -1,6 +1,6 @@
 {
   "name": "threejs-camera-controller-reframing-pan-zoom-unified-pointer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A camera controller that reframes multiple targets cinemagraphically, and allows pan and zoom controls in both movement/lens and render region via touch and mouse.",
   "main": "index.js",
   "license": "MIT",
