@@ -40,6 +40,11 @@ var onReady = function() {
 	var targetPoints = targetBoxGeometry.vertices;
 	scene.add(targetBoxMesh);
 
+	function panMap(x, y) {
+		camera.position.x += x * .2;
+		camera.position.y += y * -.2;
+	}
+
 	var pointers = new Pointers(view.canvas);
 	var controller = new ReframingPanZoomController({
 		camera: camera,
@@ -48,7 +53,8 @@ var onReady = function() {
 		pointers: pointers,
 		mouseWheel: MouseWheel,
 		targetPoints: targetPoints, 
-		size: view.domSize
+		size: view.domSize,
+		panMap: panMap,
 	});
 
 

@@ -1,13 +1,15 @@
 var PanZoomController = require('threejs-camera-controller-pan-zoom-unified-pointer');
 var MultitargetFramer = require('threejs-camera-controller-multitarget-framing');
 function Controller(opts) {
+	opts = opts || {};
 	var camera = opts.camera;
 	var panZoomController = new PanZoomController({
 		camera: opts.camera,
 		fovMin: opts.fovMin || 30,
 		fovMax: opts.fovMax || 60,
 		pointers: opts.pointers,
-		mouseWheel: opts.mouseWheel
+		mouseWheel: opts.mouseWheel,
+		panMap: opts.panMap
 	})
 	var intermediateCamera = camera.clone();
 	opts.camera.parent.add(intermediateCamera);
@@ -35,6 +37,9 @@ function Controller(opts) {
 
 	this.update = update;
 	this.setSize = setSize;
+	this.zoomSignal = panZoomController.zoomSignal;
+	this.panSignal = panZoomController.panSignal;
+	this.framingController = framingController;
 }
 
 module.exports = Controller;
