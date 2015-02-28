@@ -57,6 +57,9 @@ var onReady = function() {
 		panMap: panMap,
 	});
 
+	controller.setState(true);
+	view.renderManager.skipFrames = 0;
+
 
 	view.onResizeSignal.add(controller.setSize);
 	var size = view.getSize();
