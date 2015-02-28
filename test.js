@@ -35,7 +35,7 @@ var onReady = function() {
 
 	var margin = 1;
 
-	var targetBoxGeometry = new THREE.BoxGeometry(30, 6, 6, 1, 1, 1);
+	var targetBoxGeometry = new THREE.BoxGeometry(30, 4, 12, 1, 1, 1);
 	var targetBoxMesh = new THREE.Mesh(targetBoxGeometry);
 	var targetPoints = targetBoxGeometry.vertices;
 	scene.add(targetBoxMesh);

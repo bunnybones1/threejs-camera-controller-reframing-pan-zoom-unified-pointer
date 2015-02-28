@@ -23,15 +23,18 @@ function Controller(opts) {
 	function update() {
 		intermediateCamera.position.copy(camera.position);
 		intermediateCamera.rotation.copy(camera.rotation);
-		// intermediateCamera.updateMatrix();
+		intermediateCamera.updateMatrix();
 		intermediateCamera.updateMatrixWorld();
 		// intermediateCamera.fov = camera.fov;
+		// framingController.frameMargin.set(0, 0);
 		var deltaScore = framingController.update();
 		camera.rotation.copy(intermediateCamera.rotation);
 		// camera.updateMatrix();
 		// camera.updateMatrixWorld();
 		panZoomController.precomposeViewport(intermediateCamera);
+		// camera.updateProjectionMatrix();
 		//this metric helps you decide whether things have changed or not. helps in deciding whether its worth a rerender or not.
+		// console.log(deltaScore);
 		return deltaScore;
 	}
 
