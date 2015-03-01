@@ -58,7 +58,7 @@ var onReady = function() {
 	});
 
 	controller.setState(true);
-	view.renderManager.skipFrames = 0;
+	view.renderManager.skipFrames = 10;
 
 
 	view.onResizeSignal.add(controller.setSize);
