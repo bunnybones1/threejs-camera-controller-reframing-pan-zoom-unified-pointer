@@ -12,7 +12,7 @@
   "dependencies": {
     "input-mousewheel": "^1.0.0",
     "input-unified-pointers": "^2.1.3",
-    "threejs-camera-controller-multitarget-framing": "^3.0.2",
+    "threejs-camera-controller-multitarget-framing": "^3.0.3",
     "threejs-camera-controller-pan-zoom-unified-pointer": "^1.4.2"
   },
   "devDependencies": {
