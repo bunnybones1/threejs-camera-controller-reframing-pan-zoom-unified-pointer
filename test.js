@@ -11,6 +11,7 @@ var onReady = function() {
 	var scene = view.scene;
 	var camera = view.camera;
 
+
 	camera.position.set(0, 0, 100);
 
 	var sphereGeometry = new THREE.SphereGeometry(1.5);

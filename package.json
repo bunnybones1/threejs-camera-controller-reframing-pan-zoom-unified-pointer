@@ -13,9 +13,10 @@
     "input-mousewheel": "^1.0.0",
     "input-unified-pointers": "^2.1.3",
     "threejs-camera-controller-multitarget-framing": "^3.0.3",
-    "threejs-camera-controller-pan-zoom-unified-pointer": "^1.4.2"
+    "threejs-camera-controller-pan-zoom-unified-pointer": "^1.4.4"
   },
   "devDependencies": {
+    "canvas-valueovertimegraph": "^1.0.0",
     "loadandrunscripts": "^1.0.0",
     "threejs-managed-view": "^4.0.1"
   },
