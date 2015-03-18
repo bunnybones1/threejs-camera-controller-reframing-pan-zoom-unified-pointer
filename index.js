@@ -44,6 +44,11 @@ function Controller(opts) {
 		panZoomController.setState(state);
 	}
 
+	function reset(animate) {
+		panZoomController.reset(animate);
+		if(!animate) panZoomController.precomposeViewport(intermediateCamera);
+	}
+
 	this.update = update;
 	this.setSize = setSize;
 	this.zoomSignal = panZoomController.zoomSignal;
@@ -51,10 +56,8 @@ function Controller(opts) {
 	this.framingController = framingController;
 	this.setState = setState;
 	this.onPointerDown = panZoomController.onPointerDown;
-	this.reset = function(animate) {
-		panZoomController.reset(animate);
-		if(!animate) panZoomController.precomposeViewport(intermediateCamera);
-	}
+	this.reset = reset;
+	this.isPanning = panZoomController.isPanning;
 }
 
 module.exports = Controller;
