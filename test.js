@@ -47,12 +47,13 @@ var onReady = function() {
 	}
 
 	var pointers = new Pointers(view.canvas);
+	var mouseWheel = new MouseWheel(view.canvas);
 	var controller = new ReframingPanZoomController({
 		camera: camera,
 		fovMin: 50,
 		fovMax: 60,
 		pointers: pointers,
-		mouseWheel: MouseWheel,
+		mouseWheel: mouseWheel,
 		targetPoints: targetPoints, 
 		size: view.domSize,
 		panMap: panMap,
