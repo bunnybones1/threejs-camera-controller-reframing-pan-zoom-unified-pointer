@@ -22,12 +22,15 @@ function Controller(opts) {
 		opts.size
 	);
 
-	function update() {
+	function update(omitReframe) {
 		intermediateCamera.position.copy(camera.position);
 		intermediateCamera.rotation.copy(camera.rotation);
 		// intermediateCamera.fov = camera.fov;
 		// framingController.frameMargin.set(0, 0);
-		var deltaScore = framingController.update();
+		var deltaScore = 0;
+		if (!omitReframe) {
+			deltaScore = framingController.update();
+		}
 		camera.rotation.copy(intermediateCamera.rotation);
 		panZoomController.precomposeViewport(intermediateCamera);
 		//this metric helps you decide whether things have changed or not. helps in deciding whether its worth a rerender or not.
