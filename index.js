@@ -54,6 +54,7 @@ function Controller(opts) {
 	this.zoomSignal = panZoomController.zoomSignal;
 	this.panSignal = panZoomController.panSignal;
 	this.framingController = framingController;
+	this.panZoomController = panZoomController;
 	this.setState = setState;
 	this.onPointerDown = panZoomController.onPointerDown;
 	this.reset = reset;
