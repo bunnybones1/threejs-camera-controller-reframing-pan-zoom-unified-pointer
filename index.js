@@ -6,6 +6,7 @@ function Controller(opts) {
 	var camera = opts.camera;
 	var panZoomController = new PanZoomController({
 		camera: opts.camera,
+		tweener: opts.tweener,
 		fovMin: opts.fovMin || 30,
 		fovMax: opts.fovMax || 60,
 		zoomMax: opts.zoomMax || 0.3,
@@ -13,7 +14,7 @@ function Controller(opts) {
 		mouseWheel: opts.mouseWheel,
 		panMap: opts.panMap,
 		autoSetCamera: false
-	})
+	});
 	var intermediateCamera = camera.clone();
 	opts.camera.parent.add(intermediateCamera);
 	var framingController = new MultitargetFramer(
